@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.field {
+  width: 25.25rem;
+  height: 29.75rem;
+  border: 1px solid black;
+}
+.field .row {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+}
+.field .row--2 {
+  justify-content: space-evenly;
+}
+.field .row .dice {
+  display: flex;
+  flex: 1;
+  max-width: 5rem;
+  height: 4.75rem;
+  border: 4px solid black;
+  border-radius: 1rem;
+}
+.field .row .dice__dot {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border-radius: 50%;
+}
+.field .row .dice--1 {
+  justify-content: center;
+  align-items: center;
+}
+.field .row .dice--2 {
+  justify-content: space-between;
+  padding: 5px;
+}
+.field .row .dice--2 > .dice__dot:first-child {
+  align-self: flex-start;
+}
+.field .row .dice--2 > .dice__dot:last-child {
+  align-self: flex-end;
+}
+.field .row .dice--3 {
+  justify-content: space-between;
+  padding: 5px;
+}
+.field .row .dice--3 > .dice__dot:first-child {
+  align-self: flex-start;
+}
+.field .row .dice--3 > .dice__dot:nth-child(2) {
+  align-self: center;
+}
+.field .row .dice--3 > .dice__dot:last-child {
+  align-self: flex-end;
+}
+.field .row .dice--4 {
+  justify-content: space-between;
+  padding: 5px;
+}
+.field .row .dice--4 > .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.field .row .dice--5 {
+  justify-content: space-between;
+  padding: 5px;
+}
+.field .row .dice--5 > .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.field .row .dice--5 > .col:nth-child(2) {
+  justify-content: center;
+}
+.field .row .dice--6 {
+  justify-content: space-between;
+  padding: 5px;
+}
+.field .row .dice--6 > .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
