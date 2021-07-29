@@ -1,0 +1,165 @@
+@import "includes/fonts";
+@import "includes/variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $sblue;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover;
+  }
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  .brand {
+    font-size: 1.75rem;
+    letter-spacing: 0;
+    color: $sblue;
+    // text-align: center;
+  }
+}
+
+main {
+  .login-form {
+    max-width: 24.25rem;
+    padding: 2.75rem 2.5rem 2.5rem 2.5rem;
+    box-shadow: 0 5px 10px 1px $legray;
+    border-radius: 5px;
+
+    label {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    & > div,
+    & > div > div {
+      margin: 1rem 0;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+
+      &:nth-of-type(2) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & > a {
+          order: 2;
+          font-size: 0.9rem;
+          font-weight: 500;
+          padding-bottom: $label;
+        }
+
+        & > input {
+          order: 3;
+        }
+      }
+
+      input {
+        width: 100%;
+        height: 2.5rem;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid $legray;
+        border-radius: 5px;
+        outline: none;
+
+        &:focus,
+        &:hover {
+          outline-color: $hover;
+          outline-style: auto;
+        }
+      }
+
+      label {
+        padding-bottom: $label;
+      }
+    }
+
+    .form-item {
+      &__checkbox {
+        display: flex;
+        align-items: center;
+
+        .form-item__check {
+          cursor: pointer;
+          &:checked {
+            filter: hue-rotate(22deg) brightness(1);
+          }
+        }
+
+        & > label {
+          padding-left: 5px;
+        }
+      }
+
+      &__submit {
+        width: 100%;
+        height: 2.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: white;
+        background: $sblue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background: $darkhover;
+        }
+      }
+    }
+
+    .google-log {
+      text-align: center;
+
+      & > a {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+footer {
+  & > span {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}

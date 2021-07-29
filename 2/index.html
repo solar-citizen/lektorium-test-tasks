@@ -9,5 +9,65 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="brand">Stackfindover</h1>
+      </header>
+      <main>
+        <form class="login-form" method="GET" action="#">
+          <div>
+            <h2 class="login-form__title">Sign into your account</h2>
+          </div>
+          <div class="login-form__fields">
+            <div class="form-field">
+              <label for="getEmail">Email</label>
+              <input
+                type="email"
+                placeholder="Enter your email: "
+                id="getEmail"
+                name="email"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="getPassword">Password</label>
+              <input
+                type="password"
+                id="getPassword"
+                name="password"
+                required
+              />
+              <a href="https://www.google.com/">Forgot your password?</a>
+            </div>
+            <div class="form-item form-item__checkbox">
+              <input
+                class="form-item__check"
+                type="checkbox"
+                id="signWeek"
+                name="sign"
+              />
+              <label for="signWeek">Stay signed in for a week</label>
+            </div>
+            <div class="form-item">
+              <input class="form-item__submit" type="submit" value="Continue" />
+            </div>
+            <div class="google-log">
+              <a href="https://www.google.com/maps/"
+                >Use single sign-on (Google) instead</a
+              >
+            </div>
+          </div>
+        </form>
+      </main>
+      <footer>
+        <span>
+          Don't have an account?
+          <a href="https://www.facebook.com/">Sign up</a>
+        </span>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
