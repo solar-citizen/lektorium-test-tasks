@@ -43,7 +43,6 @@ header {
     font-size: 1.75rem;
     letter-spacing: 0;
     color: $sblue;
-    // text-align: center;
   }
 }
 
@@ -73,12 +72,13 @@ main {
       display: flex;
       flex-direction: column;
 
-      &:nth-of-type(2) {
+      &--pass {
+        position: relative;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
 
-        & > a {
+        &__link {
           order: 2;
           font-size: 0.9rem;
           font-weight: 500;
@@ -110,12 +110,22 @@ main {
       label {
         padding-bottom: $label;
       }
+
+      &__pass-msg {
+        position: absolute;
+        color: rgb(241, 25, 25);
+        bottom: -1rem;
+        right: 0;
+        font-size: 0.7rem;
+        font-weight: 500;
+      }
     }
 
     .form-item {
       &__checkbox {
         display: flex;
         align-items: center;
+        margin: 1.5rem 0;
 
         .form-item__check {
           cursor: pointer;
@@ -149,7 +159,7 @@ main {
     .google-log {
       text-align: center;
 
-      & > a {
+      &__link {
         font-size: 0.9rem;
         font-weight: 500;
       }
@@ -161,5 +171,38 @@ footer {
   & > span {
     font-size: 0.9rem;
     font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    .login-form {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 310px) {
+  main {
+    .login-form {
+      .form-field {
+        label {
+          font-size: 0.75rem;
+        }
+
+        &--pass__link {
+          font-size: 0.8rem;
+        }
+
+        &__pass-msg {
+          font-size: 0.6rem;
+        }
+      }
+
+      .google-log__link {
+        font-size: 0.75rem;
+      }
+    }
   }
 }

@@ -62,18 +62,19 @@ main .login-form .form-field {
   display: flex;
   flex-direction: column;
 }
-main .login-form .form-field:nth-of-type(2) {
+main .login-form .form-field--pass {
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-main .login-form .form-field:nth-of-type(2) > a {
+main .login-form .form-field--pass__link {
   order: 2;
   font-size: 0.9rem;
   font-weight: 500;
   padding-bottom: 0.5rem;
 }
-main .login-form .form-field:nth-of-type(2) > input {
+main .login-form .form-field--pass > input {
   order: 3;
 }
 main .login-form .form-field input {
@@ -93,9 +94,18 @@ main .login-form .form-field input:focus, main .login-form .form-field input:hov
 main .login-form .form-field label {
   padding-bottom: 0.5rem;
 }
+main .login-form .form-field__pass-msg {
+  position: absolute;
+  color: #f11919;
+  bottom: -1rem;
+  right: 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
 main .login-form .form-item__checkbox {
   display: flex;
   align-items: center;
+  margin: 1.5rem 0;
 }
 main .login-form .form-item__checkbox .form-item__check {
   cursor: pointer;
@@ -123,7 +133,7 @@ main .login-form .form-item__submit:hover {
 main .login-form .google-log {
   text-align: center;
 }
-main .login-form .google-log > a {
+main .login-form .google-log__link {
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -131,4 +141,25 @@ main .login-form .google-log > a {
 footer > span {
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+@media screen and (max-width: 576px) {
+  main .login-form {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 310px) {
+  main .login-form .form-field label {
+    font-size: 0.75rem;
+  }
+  main .login-form .form-field--pass__link {
+    font-size: 0.8rem;
+  }
+  main .login-form .form-field__pass-msg {
+    font-size: 0.6rem;
+  }
+  main .login-form .google-log__link {
+    font-size: 0.75rem;
+  }
 }

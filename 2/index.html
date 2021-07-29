@@ -30,7 +30,7 @@
                 required
               />
             </div>
-            <div class="form-field">
+            <div class="form-field form-field--pass">
               <label for="getPassword">Password</label>
               <input
                 type="password"
@@ -38,7 +38,10 @@
                 name="password"
                 required
               />
-              <a href="https://www.google.com/">Forgot your password?</a>
+              <span class="form-field__pass-msg" id="passwordMessage"></span>
+              <a class="form-field--pass__link" href="https://www.google.com/"
+                >Forgot your password?</a
+              >
             </div>
             <div class="form-item form-item__checkbox">
               <input
@@ -50,10 +53,15 @@
               <label for="signWeek">Stay signed in for a week</label>
             </div>
             <div class="form-item">
-              <input class="form-item__submit" type="submit" value="Continue" />
+              <input
+                class="form-item__submit"
+                id="submit"
+                type="submit"
+                value="Continue"
+              />
             </div>
             <div class="google-log">
-              <a href="https://www.google.com/maps/"
+              <a class="google-log__link" href="https://www.google.com/maps/"
                 >Use single sign-on (Google) instead</a
               >
             </div>
