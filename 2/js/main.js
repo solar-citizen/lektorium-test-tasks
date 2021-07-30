@@ -23,7 +23,21 @@ function uncheckCheckbox() {
 
 const submit = document.getElementById("submit");
 
-submit.onclick = function () {
-  verifyPassword();
-  uncheckCheckbox();
-};
+submit.addEventListener("click", verifyPassword);
+submit.addEventListener("click", uncheckCheckbox);
+
+// submit.onclick = function () {
+//   verifyPassword();
+//   uncheckCheckbox();
+// };
+
+// let i = 0;
+// const deleteElement = (e) => {
+//   console.log(e.target);
+//   i++;
+//   if (i == 1) {
+//     btn.removeEventListener("click", deleteElement);
+//   }
+// };
+
+// btn.addEventListener("click", deleteElement);

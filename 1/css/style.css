@@ -21,9 +21,9 @@ main {
 .field {
   display: flex;
   flex-direction: column;
-  max-width: 25.25rem;
+  max-width: 30vw;
   width: 100%;
-  max-height: 30.75rem;
+  max-height: 80vh;
   height: 100%;
   border: 1px solid black;
 }
@@ -109,27 +109,63 @@ main {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 576px) {
-  .field {
-    border: none;
+@media screen and (max-width: 1700px) {
+  main .field {
+    max-height: 55vh;
   }
 }
-@media screen and (max-width: 328px) {
-  .field {
-    height: 70%;
+@media screen and (max-width: 1500px) {
+  main .field {
+    max-height: 50vh;
   }
 }
-@media screen and (max-width: 240px) {
-  .field {
-    height: 50%;
-  }
-
-  .row.row--2 {
-    justify-content: center;
+@media screen and (max-width: 1100px) {
+  main .field {
+    max-height: 40vh;
   }
 }
-@media screen and (max-height: 305px) {
-  .row.row--2 {
+@media screen and (max-width: 950px) {
+  main .field {
+    max-height: 35vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  main .field {
+    max-height: 30vh;
+  }
+  main .field .row .dice {
+    max-width: 3rem;
+    max-height: 3rem;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  main .field .row .dice__dot {
+    width: 9px;
+    height: 9px;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .field {
+    max-height: 23vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .field {
+    max-height: 20vh;
+  }
+  main .field .row .dice {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    border: 2px solid black;
+    border-radius: 8px;
+  }
+  main .field .row .dice__dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+@media screen and (max-height: 380px) {
+  main .field .row.row--2 {
     justify-content: center;
   }
 }
