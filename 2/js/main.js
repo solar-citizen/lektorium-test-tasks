@@ -1,43 +1,30 @@
 "use strict";
 
+// minimum password length verification
 function verifyPassword() {
   const password = document.getElementById("getPassword").value,
     message = document.getElementById("passwordMessage");
 
-  //minimum password length validation
   if (password.length < 6) {
-    message.innerHTML = "Password length must be atleast 6 characters";
+    message.innerHTML = "Password length must be at least 6 characters";
     return false;
   } else {
     message.innerHTML = "";
   }
 }
 
-function uncheckCheckbox() {
+const submit = document.getElementById("submit");
+
+// add event listener (click) on submit button
+// to verify password length
+submit.addEventListener("click", verifyPassword);
+
+// add event listener (click) on submit button
+// to uncheck checked checkbox
+submit.addEventListener("click", () => {
   const checkbox = document.getElementById("signWeek");
 
   if (checkbox.checked) {
     checkbox.checked = false;
   }
-}
-
-const submit = document.getElementById("submit");
-
-submit.addEventListener("click", verifyPassword);
-submit.addEventListener("click", uncheckCheckbox);
-
-// submit.onclick = function () {
-//   verifyPassword();
-//   uncheckCheckbox();
-// };
-
-// let i = 0;
-// const deleteElement = (e) => {
-//   console.log(e.target);
-//   i++;
-//   if (i == 1) {
-//     btn.removeEventListener("click", deleteElement);
-//   }
-// };
-
-// btn.addEventListener("click", deleteElement);
+});
