@@ -1,7 +1,9 @@
 "use strict";
 
+const submit = document.getElementById("submit");
+
 // minimum password length verification
-function verifyPassword() {
+const verifyPassword = () => {
   const password = document.getElementById("getPassword").value,
     message = document.getElementById("passwordMessage");
 
@@ -11,9 +13,7 @@ function verifyPassword() {
   } else {
     message.innerHTML = "";
   }
-}
-
-const submit = document.getElementById("submit");
+};
 
 // add event listener (click) on submit button
 // to verify password length
@@ -24,7 +24,7 @@ submit.addEventListener("click", verifyPassword);
 submit.addEventListener("click", () => {
   const checkbox = document.getElementById("signWeek");
 
-  if (checkbox.checked) {
+  if (checkbox) {
     checkbox.checked = false;
   }
 });
